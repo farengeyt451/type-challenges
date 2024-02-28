@@ -13,14 +13,14 @@
 - &check; 00268-easy-if.ts
 - &check; 00533-easy-concat.ts
 - &check; 00898-easy-includes.ts
-- _ 03057-easy-push.ts
-- _ 03060-easy-unshift.ts
-- _ 03312-easy-parameters.ts
+- &check; 03057-easy-push.ts
+- &check; 03060-easy-unshift.ts
+- &check; 03312-easy-parameters.ts
 
 ## medium
-- _ 00002-medium-get-return-type.ts
-- _ 00003-medium-omit.ts
-- _ 00008-medium-readonly-2.ts
+- &check; 00002-medium-get-return-type.ts
+- &check; 00003-medium-omit.ts
+- &check; 00008-medium-readonly-2.ts
 - _ 00009-medium-deep-readonly.ts
 - _ 00010-medium-tuple-to-union.ts
 - _ 00012-medium-chainable-options.ts

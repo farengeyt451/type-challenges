@@ -20,7 +20,9 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TupleToUnion<T> = any
+type TupleToUnion<T extends readonly unknown[]> = T[number]
+
+type Test = TupleToUnion<[1, 2, 3]>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
