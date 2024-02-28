@@ -30,7 +30,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type MyOmit<T, K extends keyof T> = {[P in keyof T as P extends K ? never: P] :T[P]}
+type MyOmit<T, K extends keyof T> = {[P in keyof T as P extends K ? never: P] : T[P]}
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
