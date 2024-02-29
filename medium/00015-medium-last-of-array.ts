@@ -24,7 +24,8 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Last<T extends any[]> = any
+type Last<T extends any[]> = [T[0], ...T][T['length']]
+type Last2<T extends any[]> = T extends [..._: any[], infer R] ? R: never;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
@@ -33,6 +34,12 @@ type cases = [
   Expect<Equal<Last<[2]>, 2>>,
   Expect<Equal<Last<[3, 2, 1]>, 1>>,
   Expect<Equal<Last<[() => 123, { a: string }]>, { a: string }>>,
+]
+
+type cases2 = [
+  Expect<Equal<Last2<[2]>, 2>>,
+  Expect<Equal<Last2<[3, 2, 1]>, 1>>,
+  Expect<Equal<Last2<[() => 123, { a: string }]>, { a: string }>>,
 ]
 
 /* _____________ Further Steps _____________ */

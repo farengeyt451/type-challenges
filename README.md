@@ -21,8 +21,8 @@
 - &check; 00002-medium-get-return-type.ts
 - &check; 00003-medium-omit.ts
 - &check; 00008-medium-readonly-2.ts
-- _ 00009-medium-deep-readonly.ts
-- _ 00010-medium-tuple-to-union.ts
+- &check; 00009-medium-deep-readonly.ts
+- &check; 00010-medium-tuple-to-union.ts
 - _ 00012-medium-chainable-options.ts
 - _ 00015-medium-last-of-array.ts
 - _ 00016-medium-pop.ts

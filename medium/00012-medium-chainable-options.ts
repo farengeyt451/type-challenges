@@ -38,11 +38,21 @@
 */
 
 /* _____________ Your Code Here _____________ */
-
-type Chainable = {
-  option(key: string, value: any): any
-  get(): any
+type Chainable<T = {}> = {
+  option: <K extends string, V>(
+    key: K extends keyof T ? never : K,
+    value: V
+  ) => Chainable<Omit<T, K> & Record<K, V>>;
+  get: () => T
 }
+
+/**
+ * get: () => T -> Calculate return type
+ * option => Chainable -> Chainable options rely on self-return.
+ *  option<K extends string, V>(key: K, value: V): Chainable<T & Record<K, V>> -> record all key-value every time
+ *  option<K extends keyof any, V>(key: K extends keyof T ? never : K, value: V): Chainable<T & Record<K, V>> -> no-repeat keys
+ * Chainable<Omit<T, K> & Record<K, V>> -> union keys's value rather than overwrite, so we should omit previous K on T.
+ */
 
 /* _____________ Test Cases _____________ */
 import type { Alike, Expect } from '@type-challenges/utils'
