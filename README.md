@@ -23,9 +23,9 @@
 - &check; 00008-medium-readonly-2.ts
 - &check; 00009-medium-deep-readonly.ts
 - &check; 00010-medium-tuple-to-union.ts
-- _ 00012-medium-chainable-options.ts
-- _ 00015-medium-last-of-array.ts
-- _ 00016-medium-pop.ts
+- &check; 00012-medium-chainable-options.ts
+- &check; 00015-medium-last-of-array.ts
+- &check; 00016-medium-pop.ts
 - _ 00020-medium-promise-all.ts
 - _ 00062-medium-type-lookup.ts
 - _ 00106-medium-trim-left.ts
